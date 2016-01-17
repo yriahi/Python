@@ -2,16 +2,16 @@
 # File name: merge_csv_files.py
 # Author: Youssef Riahi
 # Date created: 01/13/2016
-# Date last modified: 01/13/2016
+# Date last modified: 01/17/2016
 # Script version: 1.0
 # Python Version: 2.7.10
 
 # Usage: 'python merge_csv_files.py cms.csv ga.tsv'
 # Added dtype='unicode' to avoid the error: "have mixed types. Specify dtype option on import or set low_memory=False."
-# Provided both files being merged as arguments instead of being hard coded.
-# Ability to write csv file to file system
 # Script can detect column names; useful to fine target key(s) to be merged on
 # Option for 'inner merge' available; but currently commented out.
+# The script merges a csv with a tsv. 
+# sep=',', quotechar='=' can be changed to match other sep/quotechar
 #----------------------------------------------------------------#
  
 from sys import argv
