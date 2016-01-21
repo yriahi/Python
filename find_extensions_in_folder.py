@@ -1,5 +1,5 @@
 #----------------------------------------------------------------#
-# File name: Find_All_File_Extensions_in_Target_Folder.py
+# File name: find_extensions_in_folder.py
 # Author: Youssef Riahi
 # Date created: 11/10/2015
 # Date last modified: 12/14/2015
