@@ -25,8 +25,8 @@ from progressbar import ProgressBar   # https://pypi.python.org/pypi/progressbar
 pbar = ProgressBar() 
 
 # api user and key
-api_user = "youremail";
-api_key = "your_api_key";
+api_user = "**********************************************";
+api_key = "***********************************************";
 
 # api url being accessed
 # '/sites' is a summary/overview for all sites
@@ -49,7 +49,6 @@ print 'Total sites: ' + str(account['total_items'])
 # api returns pagination total in page 1
 pagination_total = account['total_pages']
 # print 'Pagination total = %s' % (pagination_total)
-
 
 def get_siteimprove_account_summary():
 	# loop for pagiantion range
