@@ -7,17 +7,18 @@
 # Python Version: 2.7.10
 # 
 # Description: 
-			# A python script that merges 2 csv files on a certain column.
-			# This use case does a merge on the 'url' column between a content management system report
-			# and a Google Analytics report. The latter is in tsv format. 
+# 	A python script that merges 2 csv files on a certain column.
+# 	This use case does a merge on the 'url' column between a content management system report
+# 	and a Google Analytics report. The latter is in tsv format. 
 # 
-# Usage: 'python merge_csv_files.py yourfile1.csv yourfile2.tsv'
+# Usage: 
+#	'python merge_csv_files.py yourfile1.csv yourfile2.tsv'
 # 
 # Notes:
-# Added dtype='unicode' to avoid the error: "have mixed types. Specify dtype option on import or set low_memory=False."
-# Script can detect column names; useful to find target key(s) to be merged on.
-# Option for 'inner merge' available; but currently commented out.
-# Script can merge other csv formats as long as 'sep' and 'quotechar' are updated accordingly.
+# 	Added dtype='unicode' to avoid the error: "have mixed types. Specify dtype option on import or set low_memory=False."
+# 	Script can detect column names; useful to find target key(s) to be merged on.
+# 	Option for 'inner merge' available; but currently commented out.
+# 	Script can merge other csv formats as long as 'sep' and 'quotechar' are updated accordingly.
 #----------------------------------------------------------------#
  
 from sys import argv
