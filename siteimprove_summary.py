@@ -1,9 +1,9 @@
 #----------------------------------------------------------------#
-# File name: siteimprove.py
+# File name: siteimprove_summary.py
 # Author: Youssef Riahi
 # Date created: 01/20/2016
-# Date last modified: 01/20/2016
-# Script version: 1.0
+# Date last modified: 01/22/2016
+# Script version: 1.1
 # Python Version: 2.7.10
 
 # Description:
@@ -15,11 +15,15 @@
 # 
 # Usage: 
 # 	python siteimprove.py
+# 
+# Updates:
+#	added 'prettytable' for formatting
 #----------------------------------------------------------------#
 
 import requests                       # http://docs.python-requests.org/en/latest/
 import json                           # https://docs.python.org/2/library/json.html
 from progressbar import ProgressBar   # https://pypi.python.org/pypi/progressbar
+from prettytable import PrettyTable   # https://code.google.com/p/prettytable/
 
 # assign a short variable name to the progress bar function
 pbar = ProgressBar() 
@@ -51,6 +55,15 @@ pagination_total = account['total_pages']
 # print 'Pagination total = %s' % (pagination_total)
 
 def get_siteimprove_account_summary():
+	# setting up table header: 'site_name' and 'broken_links' columns
+	qa_account_summary = PrettyTable(["Site Name", "Broken Link Count"])
+
+	# One space between column edges and contents (default)
+	qa_account_summary.padding_width = 1
+	
+	# Left align 'site_name'
+	qa_account_summary.align["Site Name"] = "l" 
+
 	# loop for pagiantion range
 	for pagination_item in range(pagination_total):
 		
@@ -65,10 +78,11 @@ def get_siteimprove_account_summary():
 		# print pagination_response.status_code
 		websites = my_account['items']
 		for website in websites:
-			print website['site_name'], website['broken_link_count']
+			# print website['site_name'], website['broken_link_count']
+			qa_account_summary.add_row([website['site_name'], website['broken_link_count']])
 			# loop key:value for each site
 			# for key, value in website.iteritems():
 			# 	print key, value
+		print qa_account_summary
 
 summary = get_siteimprove_account_summary()
-
