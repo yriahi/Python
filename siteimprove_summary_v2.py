@@ -27,7 +27,7 @@ import requests                       # http://docs.python-requests.org/en/lates
 import json                           # https://docs.python.org/2/library/json.html
 from progressbar import ProgressBar   # https://pypi.python.org/pypi/progressbar
 from prettytable import PrettyTable   # https://code.google.com/p/prettytable/
-import csv 							  # https://docs.python.org/2/library/csv.html
+import csv                            # https://docs.python.org/2/library/csv.html
 
 # assign a short name to 'ProgressBar()'
 pbar = ProgressBar() 
@@ -119,12 +119,3 @@ render_table_from_csv()
 # api returns paginated data
 # total of all sites is available in 'page 1'
 print 'Total sites: ' + str(account['total_items'])
-
-
-
-
-
-
-
-
-
