@@ -33,8 +33,8 @@ import csv                            # https://docs.python.org/2/library/csv.ht
 pbar = ProgressBar() 
 
 # siteimprove api: user and key
-api_user = "EMAIL";
-api_key = "API_KEY";
+api_user = "***EMAIL***";
+api_key = "***API_KEY***";
 
 # api url being accessed
 # '/sites' is a summary/overview for all sites
