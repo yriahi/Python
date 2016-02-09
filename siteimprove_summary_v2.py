@@ -15,7 +15,7 @@
 # 	requires api access; update api_user and api_key accordingly
 # 
 # Usage: 
-# 	python siteimprove.py
+# 	python siteimprove_summary_v2.py
 # 
 # Updates:
 #	added 'prettytable' for formatting
@@ -33,8 +33,8 @@ import csv 							  # https://docs.python.org/2/library/csv.html
 pbar = ProgressBar() 
 
 # siteimprove api: user and key
-api_user = "*************************";
-api_key = "**************************";
+api_user = "EMAIL";
+api_key = "API_KEY";
 
 # api url being accessed
 # '/sites' is a summary/overview for all sites
@@ -70,7 +70,7 @@ def get_siteimprove_mysites_summary():
 	all_sites = {}
 
 	# loop for pagination range
-	for pagination_item in range(pagination_total):
+	for pagination_item in pbar(range(pagination_total)):
 		
 		# since items in list start with '0', no good if added to 'resource'. so...
 		# we increment by '1'; then we go from there
