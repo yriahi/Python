@@ -22,15 +22,11 @@
 
 import requests                       # http://docs.python-requests.org/en/latest/
 import json                           # https://docs.python.org/2/library/json.html
-from progressbar import ProgressBar   # https://pypi.python.org/pypi/progressbar
 from prettytable import PrettyTable   # https://code.google.com/p/prettytable/
 
-# assign a short variable name to the progress bar function
-pbar = ProgressBar() 
-
 # api user and key
-api_user = "**********************************************";
-api_key = "***********************************************";
+api_user = "***EMAIL***";
+api_key = "***API_KEY***";
 
 # api url being accessed
 # '/sites' is a summary/overview for all sites
@@ -86,3 +82,4 @@ def get_siteimprove_account_summary():
 		print qa_account_summary
 
 summary = get_siteimprove_account_summary()
+
